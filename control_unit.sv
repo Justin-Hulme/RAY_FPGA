@@ -118,7 +118,7 @@ module control_unit #(
         fifo_in.y_side = pe_y_side;
     end
 
-    // Output stream (consumer side)
+    // Output stream (send to dual port RAM module)
     always_ff @(posedge clk) begin
         if (!fifo_empty) begin
             col_valid  <= 1'b1;
